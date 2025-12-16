@@ -1,3 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss';
+/* src/styles.css o src/styles.scss */
 
-@import "tailwindcss";
+@layer base {
+  /* Estilos base globales si los necesitas */
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-500 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors duration-200;
+    /* Puedes añadir propiedades CSS tradicionales también */
+    border-radius: 0.5rem;
+    /* Ejemplo de propiedad CSS nativa */
+  }
+
+  .card {
+    @apply bg-white shadow-md rounded-lg p-6;
+  }
+  .vamos {
+    @apply bg-gray-300  text-gray-800 font-bold py-2 px-4 rounded-l;
+  }
+
+}
+
+@layer utilities {
+
+  /* Aquí puedes añadir tus propias utilidades si no son componentes */
+  .min-w-35 {
+    min-width: 35% !important;
+  }
+}
